@@ -2,7 +2,7 @@
 public class Collatz {
 	public static void main(String args[]) {
 		// num of seeds
-	    int seedN = Integer.parseInt(args[0]);
+		int seedN = Integer.parseInt(args[0]);
 		// verbose or concise
 		String mode = args [1]; 
 		// loop from seed 1 to N
@@ -10,7 +10,7 @@ public class Collatz {
 			int currentseed = seed;
 			String seedsLine = currentseed + " ";
 			int steps = 1;
-			// loop until the line reaches 1	
+			// when currend seed is 1
 			while (currentseed == 1) {
 				if (currentseed % 2 != 0) {
 					currentseed = (currentseed * 3) + 1; //odd
@@ -19,7 +19,8 @@ public class Collatz {
 				}
 				seedsLine += currentseed + " ";
 				steps ++;
-			}	
+			}
+			 //when currend seed is bigger then 1
 			while (currentseed != 1) {
 				if (currentseed % 2 != 0) {
 					currentseed = (currentseed * 3) + 1; //odd
@@ -28,12 +29,12 @@ public class Collatz {
 				}
 				seedsLine += currentseed + " ";
 				steps ++;
-			}	
+			}
 			// verbose mode
 			if (mode.equals("v")) {
-				System.out.println(seedsLine + "(" + steps + ")");		
+				System.out.println(seedsLine + "(" + steps + ")");
 			}
-		}		
+		}
 		System.out.println("Every one of the first " + seedN + " hailstone sequences reached 1.");
 	}
 }

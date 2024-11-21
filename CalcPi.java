@@ -1,7 +1,7 @@
 // Computes an approximation of PI.
 public class CalcPi {
 	public static void main(String [] args) { 
-	    int numOfTerms = Integer.parseInt(args[0]);
+		int numOfTerms = Integer.parseInt(args[0]);
 		double sum = 0.0;
 		for (int i = 0; i < numOfTerms; i++) {
 			// 1.0 / (2 * i + 1)= 1, 1/3, 1/5, 1/7 ...
